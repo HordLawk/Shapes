@@ -19,6 +19,6 @@ class Retangulo(Figura):
         drawing = ''
         for i in range(self.altura):
             for j in range(self.base):
-                drawing += ((not (i % (self.altura - 1))) or (not (j % (self.base - 1))) or self.filled) and '##' or '  '
+                drawing += ((not (i % ((self.altura - 1) or -1))) or (not (j % ((self.base - 1) or -1))) or self.filled) and '##' or '  '
             drawing += '\n'
         return drawing
